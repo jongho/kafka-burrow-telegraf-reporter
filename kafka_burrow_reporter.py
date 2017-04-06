@@ -5,7 +5,7 @@ import json
 import re
 
 # VERSION 0.1
-# FROM https://github.com/jongho/kafka-burrow-telegraf-translator
+# FROM https://github.com/jongho/kafka-burrow-telegraf-reporter
 
 # This code was written with inspiration from  kafka_jolokia_reporter.py (https://github.com/paksu/kafka-jolokia-telegraf-collector)
 
