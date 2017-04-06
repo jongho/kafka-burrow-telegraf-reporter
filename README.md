@@ -1,1 +1,1 @@
-# kafka-burrow-telegraf-translator
+# kafka-burrow-telegraf-reporter
