@@ -107,8 +107,8 @@ def translate_lag_data(lag_data):
         }
 
     - TO:
-        kafka.consumer.lag,cluster=test,group=TestGroup status=OK,complete=true,totallag=0,partition_count=1
-        kafka.consumer.tp.lag,cluster=test,group=TestGroup,topic=Common-Test,partition=0 status=OK,start.lag=0,start.max_offset=14132620,start.offset=14132620,start.timestamp=1491449751328,end.lag=0,end.max_offset=14132620,end.offset=14132620,end.timestamp=1491449751328
+        kafka.consumer.lag,cluster=test,group=TestGroup complete=True,totallag=0,partition_count=1
+        kafka.consumer.tp.lag,cluster=test,group=TestGroup,topic=Common-Test,partition=0 start.lag=0,start.max_offset=14132620,start.offset=14132620,start.timestamp=1491449751328,end.lag=0,end.max_offset=14132620,end.offset=14132620,end.timestamp=1491449751328
         ...
     """
     metrics = []
@@ -116,7 +116,7 @@ def translate_lag_data(lag_data):
     # kafka.consumer.lag
     lag_measurement = 'kafka.consumer.lag'
     lag_tags = get_formated_str(lag_data, ['cluster', 'group'])
-    lag_fields = get_formated_str(lag_data, ['status', 'complete', 'totallag', 'partition_count'])
+    lag_fields = get_formated_str(lag_data, ['complete', 'totallag', 'partition_count'])
     #print("lag_tags: {}".format(lag_tags))
     #print("lag_fields: {}".format(lag_fields))
 
@@ -127,8 +127,7 @@ def translate_lag_data(lag_data):
     for tp_lag_data in lag_data['partitions']:
         #print("tp_lag_data: {}".format(tp_lag_data))
         tg_lag_tags = lag_tags + ',' + get_formated_str(tp_lag_data, ['topic', 'partition'])
-        tg_lag_fields = get_formated_str(tp_lag_data, ['status']) + ',' + \
-            get_formated_str(tp_lag_data['start'], ['lag', 'max_offset', 'offset', 'timestamp'], 'start.') + ',' + \
+        tg_lag_fields = get_formated_str(tp_lag_data['start'], ['lag', 'max_offset', 'offset', 'timestamp'], 'start.') + ',' + \
             get_formated_str(tp_lag_data['end'], ['lag', 'max_offset', 'offset', 'timestamp'], 'end.')
         metrics.append("{},{} {}".format(tp_lag_measurement, tg_lag_tags, tg_lag_fields))
 
