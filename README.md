@@ -12,7 +12,7 @@ Currently supports at least Kafka 0.10.2 and Burrow (https://github.com/linkedin
 
 ## Requirements
 
-Install and configure `burrow` to expose Kafka Consumer Lag metrics.
+Install and configure [`burrow`|https://github.com/linkedin/Burrow/blob/master/README.md] to expose Kafka Consumer Lag metrics.
 
 ## Usage
 
