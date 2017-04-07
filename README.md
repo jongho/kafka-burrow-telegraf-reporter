@@ -3,7 +3,7 @@
 
 Parses Kafka Consumer Lag metrics exposed via burrow and converts them to a set of InfluxDB Line protocol metrics.
 
-This code was written with inspiration from  kafka_jolokia_reporter.py (https://github.com/paksu/kafka-jolokia-telegraf-collector)
+**This code was written based on kafka_jolokia_reporter.py (https://github.com/paksu/kafka-jolokia-telegraf-collector)**
 
 Currently supports at least Kafka 0.10.2 and Burrow (https://github.com/linkedin/Burrow 2017-03-07 commit)
 - https://github.com/linkedin/Burrow
