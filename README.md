@@ -14,8 +14,6 @@ Currently supports at least Kafka 0.10.2 and Burrow (https://github.com/linkedin
 
 Install and configure `burrow` to expose Kafka Consumer Lag metrics.
 
-Setting `KAFKA_OPTS=-javaagent:/path/to/jolokia/jolokia-1.3.3/agents/jolokia-jvm.jar` when launching Kafka broker should be enough
-
 ## Usage
 
 ### How to run the script
