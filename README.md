@@ -23,7 +23,7 @@ Install and configure [`burrow`](https://github.com/linkedin/Burrow/blob/master/
 - `--burrow-port` defaults to 8000
 
 Example:
-```python kafka_burrow_reporter.py --burrow-host=localhost --burrow-port=8778```
+```python kafka_burrow_reporter.py --burrow-host=localhost --burrow-port=8000```
 
 ### Configure script to pass metrics to telegraf
 
