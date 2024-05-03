@@ -1,6 +1,14 @@
 # kafka-burrow-telegraf-reporter
 >  Simple Kafka Consumer Lag metric reporter for telegraf with Burrow
 
+-----
+
+## Do not use this! Use Telegraf plugin for Burrow!
+- https://www.influxdata.com/integration/burrow/
+- https://github.com/influxdata/telegraf/blob/master/plugins/inputs/burrow/README.md
+
+-----
+
 Parses Kafka Consumer Lag metrics exposed via burrow and converts them to a set of InfluxDB Line protocol metrics.
 
 **This code was written based on kafka_jolokia_reporter.py (https://github.com/paksu/kafka-jolokia-telegraf-collector)**
